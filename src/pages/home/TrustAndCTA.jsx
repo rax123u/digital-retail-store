@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { FiArrowRight } from 'react-icons/fi'
 import { stats } from '../../data/homeData'
+import { Link } from 'react-router-dom'
 
 export const TrustAndCTA = () => (
   <>
@@ -19,9 +20,11 @@ export const TrustAndCTA = () => (
       <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="max-w-4xl">
         <h2 className="text-6xl sm:text-8xl md:text-9xl font-black uppercase leading-none tracking-tighter text-slate-950 mb-8">Start Shopping</h2>
         <p className="text-lg text-slate-600 font-light max-w-2xl mx-auto mb-12">Discover premium technology that transforms the way you work and live.</p>
+        <Link to="/store">
         <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }} className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-slate-950 text-white font-bold uppercase text-sm tracking-widest rounded-xl shadow-2xl hover:shadow-3xl hover:bg-slate-800 transition-all duration-300">
           Browse Collection <FiArrowRight size={18} />
         </motion.button>
+        </Link>
       </motion.div>
     </section>
   </>
